@@ -10,7 +10,12 @@ const SignIn = () => {
     const signIn = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {} )
+        .then((userCredential) => {
+            console.log(userCredential);
+        })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
   return (
